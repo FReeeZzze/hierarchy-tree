@@ -1,0 +1,28 @@
+version: "3"
+
+volumes:
+  mongodb_database:
+
+services:
+  hierarchy-tree-app:
+    image: freeezzz/hierarchy-tree-app
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - NODE_ENV=production
+  hierarchy-tree-server:
+    image: freeezzz/hierarchy-tree-server
+    restart: always
+    ports:
+      - 5000:5000
+    environment:
+      - NODE_ENV=production
+  mongo:
+    image: mongo:latest
+    volumes:
+      - mongodb_database:/data/db
+      - ./server/mongodb/init.js:/docker-entrypoint-initdb.d/init.js
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: tree

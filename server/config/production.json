@@ -1,0 +1,9 @@
+{
+  "Tree": {
+    "port": "5000",
+    "dbConfig": {
+      "mongoUri": "mongodb://mongo:27017",
+      "database": "tree"
+    }
+  }
+}
