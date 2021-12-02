@@ -1,24 +1,13 @@
 # hierarchy-tree
 
 ## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
 ```
-npm run serve
-```
+docker-compose up -d
 
-### Compiles and minifies for production
-```
-npm run build
-```
+OR
 
-### Lints and fixes files
-```
-npm run lint
-```
+npm install && npm run serve
+cd ./server && npm install && npm run start
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
