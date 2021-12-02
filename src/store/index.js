@@ -1,6 +1,6 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-import { SET_CITIES, SET_HEAP, SET_CITIZENS } from './mutation-types';
+import Vue from "vue";
+import Vuex from "vuex";
+import { SET_CITIES, SET_HEAP, SET_CITIZENS } from "./mutation-types";
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
@@ -30,7 +30,7 @@ const store = new Vuex.Store({
       return existsItem ? existsItem : [];
     },
     filterCityById: (state) => (id) => {
-      return state.cities.filter((c) => c.id === id);
+      return state.cities.filter((c) => c.id === id || c._id === id);
     },
   },
   actions: {
